@@ -172,7 +172,6 @@ namespace SekolahOnline.Controllers
             return View();
         }
 
-
         private bool CourseExists(int id)
         {
             return _context.Courses.Any(e => e.CourseID == id);

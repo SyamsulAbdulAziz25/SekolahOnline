@@ -1,5 +1,5 @@
---temp-output:C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\obj\Debug\netcoreapp1.0\
---out:C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\bin\Debug\netcoreapp1.0\SekolahOnline.dll
+--temp-output:C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\bin\src\SekolahOnline\obj\Debug\netcoreapp1.0\
+--out:C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\bin\src\SekolahOnline\bin\Debug\netcoreapp1.0\SekolahOnline.dll
 --define:DEBUG
 --define:TRACE
 --define:NETCOREAPP1_0
@@ -227,7 +227,7 @@
 --reference:C:\Users\penssky04\.nuget\packages\System.Threading.Timer\4.0.1\ref\netstandard1.2\System.Threading.Timer.dll
 --reference:C:\Users\penssky04\.nuget\packages\System.Xml.ReaderWriter\4.0.11\ref\netstandard1.3\System.Xml.ReaderWriter.dll
 --reference:C:\Users\penssky04\.nuget\packages\System.Xml.XDocument\4.0.11\ref\netstandard1.3\System.Xml.XDocument.dll
---resource:"C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\obj\Debug\netcoreapp1.0\SekolahOnlinedotnet-compile.deps.json",SekolahOnline.deps.json
+--resource:"C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\bin\src\SekolahOnline\obj\Debug\netcoreapp1.0\SekolahOnlinedotnet-compile.deps.json",SekolahOnline.deps.json
 C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\PaginatedList.cs
 C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\Program.cs
 C:\Users\penssky04\documents\visual studio 2015\Projects\SekolahOnline\src\SekolahOnline\Startup.cs

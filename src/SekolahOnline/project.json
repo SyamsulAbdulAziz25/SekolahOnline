@@ -1,4 +1,4 @@
-﻿{
+{
   "userSecretsId": "aspnet-SekolahOnline-c23d7967-3be8-4744-9a3a-4ccf8085bd5e",
 
   "dependencies": {
@@ -35,7 +35,6 @@
     "Microsoft.Extensions.Logging": "1.0.0",
     "Microsoft.Extensions.Logging.Console": "1.0.0",
     "Microsoft.Extensions.Logging.Debug": "1.0.0",
-    //"Microsoft.EntityFrameworkCoreExtensions.Options.ConfigurationExtensions": "1.0.0",
     "Microsoft.VisualStudio.Web.BrowserLink.Loader": "14.0.0",
     "Microsoft.VisualStudio.Web.CodeGeneration.Tools": {
       "version": "1.0.0-preview2-final",
@@ -45,6 +44,7 @@
       "version": "1.0.0-preview2-final",
       "type": "build"
     }
+    //"AdminLteMvc": "1.0.0"
   },
 
   "tools": {

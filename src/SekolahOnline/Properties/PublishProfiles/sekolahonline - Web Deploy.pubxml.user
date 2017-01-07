@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAhWuUYrtRBE+3Mn7aLWZvAQAAAAACAAAAAAAQZgAAAAEAACAAAADikta3u/QrBDd5bKKH1idRMwC1M18asSdoaNHloVksQwAAAAAOgAAAAAIAACAAAACP7Yd3OBTo+kwwNrAFPz30W5FHnnCp4lw/KG5dlM7cNIAAAAAt00DfsKjIDNhkfZeIPt8CmrujSBX77P9PmwKeq5weYEUlUJwX8B8YwVItrcSfzMC0n+PDLXLY54SDJxaV8Wq/u2ZTWTpMqbGt1tNRvgZ/9WHExcKzSGr8FWg8RBSXsN1n6stcf/GrHCRpm1+ZUp9HcAVVQpewIlR6YeUYISIdGUAAAAC1JC3NmoCZEM46gTPB/nUu1N/Ozsb5kWN5jQuC04jZxd3+pG41qMidW0apKCUNetwnfs9WjchJA+hRD0xLDN6X</EncryptedPassword>
+  </PropertyGroup>
+  <ItemGroup>
+    <DestinationConnectionStrings Include="DefaultConnection">
+      <Value>Server=(localdb)\mssqllocaldb;Database=aspnet-SekolahOnline-3;Trusted_Connection=True;MultipleActiveResultSets=true</Value>
+    </DestinationConnectionStrings>
+  </ItemGroup>
+</Project>

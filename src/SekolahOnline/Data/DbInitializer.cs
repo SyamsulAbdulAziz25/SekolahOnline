@@ -13,7 +13,7 @@ namespace SekolahOnline.Data
             context.Database.EnsureCreated();
 
             // Look For any students.
-            if ( context.Students.Any() )
+            if (context.Students.Any())
             {
                 return; // DB has been seeded
             }
@@ -21,14 +21,14 @@ namespace SekolahOnline.Data
             // adding data to students
             var students = new Student[]
             {
-                new Student{FirstMidName="Carson",LastName="Alexander",EnrollmentDate=DateTime.Parse("2005-09-01")},
-                new Student{FirstMidName="Meredith",LastName="Alonso",EnrollmentDate=DateTime.Parse("2002-09-01")},
-                new Student{FirstMidName="Arturo",LastName="Anand",EnrollmentDate=DateTime.Parse("2003-09-01")},
-                new Student{FirstMidName="Gytis",LastName="Barzdukas",EnrollmentDate=DateTime.Parse("2002-09-01")},
-                new Student{FirstMidName="Yan",LastName="Li",EnrollmentDate=DateTime.Parse("2002-09-01")},
-                new Student{FirstMidName="Peggy",LastName="Justice",EnrollmentDate=DateTime.Parse("2001-09-01")},
-                new Student{FirstMidName="Laura",LastName="Norman",EnrollmentDate=DateTime.Parse("2003-09-01")},
-                new Student{FirstMidName="Nino",LastName="Olivetto",EnrollmentDate=DateTime.Parse("2005-09-01")}
+                new Student{FirstMidName="Viqi",LastName="Firdaus",EnrollmentDate=DateTime.Parse("2005-09-01")},
+                new Student{FirstMidName="Fuad",LastName="Abdullah",EnrollmentDate=DateTime.Parse("2002-09-01")},
+                new Student{FirstMidName="Irfan",LastName="Khoirul",EnrollmentDate=DateTime.Parse("2003-09-01")},
+                new Student{FirstMidName="Samsul",LastName="Maarif",EnrollmentDate=DateTime.Parse("2002-09-01")},
+                new Student{FirstMidName="Rafi",LastName="li",EnrollmentDate=DateTime.Parse("2002-09-01")},
+                new Student{FirstMidName="Agung",LastName="Imamu",EnrollmentDate=DateTime.Parse("2001-09-01")},
+                new Student{FirstMidName="Dila",LastName="Nur",EnrollmentDate=DateTime.Parse("2003-09-01")},
+                new Student{FirstMidName="Rima",LastName="Wanti",EnrollmentDate=DateTime.Parse("2005-09-01")}
             };
 
             foreach (Student s in students)
@@ -36,22 +36,22 @@ namespace SekolahOnline.Data
                 context.Students.Add(s);
             }
             context.SaveChanges();
-            
+
 
 
 
             // adding data to instructors
             var instructors = new Instructor[]
             {
-                new Instructor { FirstMidName = "Kim",     LastName = "Abercrombie",
+                new Instructor { FirstMidName = "Nana",     LastName = "Ramadijanti",
                     HireDate = DateTime.Parse("1995-03-11") },
-                new Instructor { FirstMidName = "Fadi",    LastName = "Fakhouri",
+                new Instructor { FirstMidName = "Udin",    LastName = "Harun",
                     HireDate = DateTime.Parse("2002-07-06") },
-                new Instructor { FirstMidName = "Roger",   LastName = "Harui",
+                new Instructor { FirstMidName = "Achmad",   LastName = "Harui",
                     HireDate = DateTime.Parse("1998-07-01") },
-                new Instructor { FirstMidName = "Candace", LastName = "Kapoor",
+                new Instructor { FirstMidName = "Muarifin", LastName = "Aja",
                     HireDate = DateTime.Parse("2001-01-15") },
-                new Instructor { FirstMidName = "Roger",   LastName = "Zheng",
+                new Instructor { FirstMidName = "Achmad",   LastName = "Basuki",
                     HireDate = DateTime.Parse("2004-02-12") }
             };
             foreach (Instructor i in instructors)
@@ -65,16 +65,16 @@ namespace SekolahOnline.Data
             {
                 new Department { Name = "English",     Budget = 350000,
                     StartDate = DateTime.Parse("2007-09-01"),
-                    InstructorID  = instructors.Single( i => i.LastName == "Abercrombie").ID },
+                    InstructorID  = instructors.Single( i => i.LastName == "Ramadijanti").ID },
                 new Department { Name = "Mathematics", Budget = 100000,
                     StartDate = DateTime.Parse("2007-09-01"),
-                    InstructorID  = instructors.Single( i => i.LastName == "Fakhouri").ID },
+                    InstructorID  = instructors.Single( i => i.LastName == "Harun").ID },
                 new Department { Name = "Engineering", Budget = 350000,
                     StartDate = DateTime.Parse("2007-09-01"),
                     InstructorID  = instructors.Single( i => i.LastName == "Harui").ID },
                 new Department { Name = "Economics",   Budget = 100000,
                     StartDate = DateTime.Parse("2007-09-01"),
-                    InstructorID  = instructors.Single( i => i.LastName == "Kapoor").ID }
+                    InstructorID  = instructors.Single( i => i.LastName == "Aja").ID }
             };
 
             foreach (Department d in departments)
@@ -105,7 +105,7 @@ namespace SekolahOnline.Data
                 new Course {CourseID = 2021, Title = "Composition",    Credits = 3,
                     DepartmentID = departments.Single( s => s.Name == "English").DepartmentID
                 },
-                new Course {CourseID = 2042, Title = "Literature",     Credits = 4,
+                new Course {CourseID = 2042, Title = "literature",     Credits = 4,
                     DepartmentID = departments.Single( s => s.Name == "English").DepartmentID
                 },
             };
@@ -120,57 +120,57 @@ namespace SekolahOnline.Data
             var enrollments = new Enrollment[]
             {
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Alexander").ID,
+                    StudentID = students.Single(s => s.LastName == "Firdaus").ID,
                     CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID,
                     Grade = Grade.A
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Alexander").ID,
+                    StudentID = students.Single(s => s.LastName == "Firdaus").ID,
                     CourseID = courses.Single(c => c.Title == "Microeconomics" ).CourseID,
                     Grade = Grade.C
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Alexander").ID,
+                    StudentID = students.Single(s => s.LastName == "Firdaus").ID,
                     CourseID = courses.Single(c => c.Title == "Macroeconomics" ).CourseID,
                     Grade = Grade.B
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Alonso").ID,
+                    StudentID = students.Single(s => s.LastName == "Abdullah").ID,
                     CourseID = courses.Single(c => c.Title == "Calculus" ).CourseID,
                     Grade = Grade.B
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Alonso").ID,
+                    StudentID = students.Single(s => s.LastName == "Abdullah").ID,
                     CourseID = courses.Single(c => c.Title == "Trigonometry" ).CourseID,
                     Grade = Grade.B
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Alonso").ID,
+                    StudentID = students.Single(s => s.LastName == "Abdullah").ID,
                     CourseID = courses.Single(c => c.Title == "Composition" ).CourseID,
                     Grade = Grade.B
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Anand").ID,
+                    StudentID = students.Single(s => s.LastName == "Khoirul").ID,
                     CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Anand").ID,
+                    StudentID = students.Single(s => s.LastName == "Khoirul").ID,
                     CourseID = courses.Single(c => c.Title == "Microeconomics").CourseID,
                     Grade = Grade.B
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Barzdukas").ID,
+                    StudentID = students.Single(s => s.LastName == "Maarif").ID,
                     CourseID = courses.Single(c => c.Title == "Chemistry").CourseID,
                     Grade = Grade.B
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Li").ID,
+                    StudentID = students.Single(s => s.LastName == "li").ID,
                     CourseID = courses.Single(c => c.Title == "Composition").CourseID,
                     Grade = Grade.B
                 },
                 new Enrollment {
-                    StudentID = students.Single(s => s.LastName == "Justice").ID,
-                    CourseID = courses.Single(c => c.Title == "Literature").CourseID,
+                    StudentID = students.Single(s => s.LastName == "Imamu").ID,
+                    CourseID = courses.Single(c => c.Title == "literature").CourseID,
                     Grade = Grade.B
                 }
             };
@@ -193,13 +193,13 @@ namespace SekolahOnline.Data
             var officeAssignments = new OfficeAssignment[]
             {
                 new OfficeAssignment {
-                    InstructorID = instructors.Single( i => i.LastName == "Fakhouri").ID,
+                    InstructorID = instructors.Single( i => i.LastName == "Harun").ID,
                     Location = "Smith 17" },
                 new OfficeAssignment {
                     InstructorID = instructors.Single( i => i.LastName == "Harui").ID,
                     Location = "Gowan 27" },
                 new OfficeAssignment {
-                    InstructorID = instructors.Single( i => i.LastName == "Kapoor").ID,
+                    InstructorID = instructors.Single( i => i.LastName == "Aja").ID,
                     Location = "Thompson 304" },
             };
             foreach (OfficeAssignment o in officeAssignments)
@@ -213,7 +213,7 @@ namespace SekolahOnline.Data
             {
                 new CourseAssignment {
                     CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Kapoor").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Aja").ID
                     },
                 new CourseAssignment {
                     CourseID = courses.Single(c => c.Title == "Chemistry" ).CourseID,
@@ -221,15 +221,15 @@ namespace SekolahOnline.Data
                     },
                 new CourseAssignment {
                     CourseID = courses.Single(c => c.Title == "Microeconomics" ).CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Zheng").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Basuki").ID
                     },
                 new CourseAssignment {
                     CourseID = courses.Single(c => c.Title == "Macroeconomics" ).CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Zheng").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Basuki").ID
                     },
                 new CourseAssignment {
                     CourseID = courses.Single(c => c.Title == "Calculus" ).CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Fakhouri").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Harun").ID
                     },
                 new CourseAssignment {
                     CourseID = courses.Single(c => c.Title == "Trigonometry" ).CourseID,
@@ -237,11 +237,11 @@ namespace SekolahOnline.Data
                     },
                 new CourseAssignment {
                     CourseID = courses.Single(c => c.Title == "Composition" ).CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Abercrombie").ID
+                    InstructorID = instructors.Single(i => i.LastName == "Ramadijanti").ID
                     },
                 new CourseAssignment {
-                    CourseID = courses.Single(c => c.Title == "Literature" ).CourseID,
-                    InstructorID = instructors.Single(i => i.LastName == "Abercrombie").ID
+                    CourseID = courses.Single(c => c.Title == "literature" ).CourseID,
+                    InstructorID = instructors.Single(i => i.LastName == "Ramadijanti").ID
                     },
             };
 
@@ -251,7 +251,7 @@ namespace SekolahOnline.Data
             }
             context.SaveChanges();
 
-            
+
         }
     }
 }

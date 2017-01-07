@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 
@@ -9,7 +6,7 @@ namespace SekolahOnline.Models
 {
     public class Course
     {
-        [DatabaseGenerated (DatabaseGeneratedOption.None)]
+        [DatabaseGenerated(DatabaseGeneratedOption.None)]
         [Display(Name = "Number")]
         public int CourseID { get; set; }
 
@@ -18,6 +15,7 @@ namespace SekolahOnline.Models
 
         [Range(0, 5)]
         public int Credits { get; set; }
+
         public int DepartmentID { get; set; }
 
         public Department Department { get; set; }
